@@ -1,6 +1,6 @@
 import random
 print("HANGMAN\n The game will be available soon.")
-words = ["jawa", "python"]
+words = ["jawa", "python" , "cash" , "opinion"]
 word = random.choice(words)
 print("Hangman \n Guess the word")
 a = input(">")
