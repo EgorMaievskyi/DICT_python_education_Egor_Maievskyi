@@ -11,6 +11,12 @@ print("Hangman \n Guess the word")
 while wrong < wrong_max and so_far != word:
     print("Attempts :" ,wrong)
     lett = input("Input a letter>")
+    if lett != lett.lower():
+        print("Please,enter a lowercase English letter")
+        continue
+    if len(lett) != 1:
+        print("You should input a single letter")
+        continue
 
     while lett in used:
         print("You've already guessed this letter")
