@@ -6,6 +6,7 @@ words = ["jawa", "python" , "cash" , "opinion"]
 word = random.choice(words)
 used = []
 so_far = "-" * len(word)
+play = 1
 print(so_far)
 print("Hangman \n Guess the word")
 while wrong < wrong_max and so_far != word:
@@ -39,5 +40,3 @@ if wrong == wrong_max:
     print("You dead!")
 else:
     print("You survived!")
-
-
