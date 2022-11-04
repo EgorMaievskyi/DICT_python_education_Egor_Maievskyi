@@ -14,7 +14,20 @@ for key in range(int(number)):
     friends.setdefault(name_input, 0)
 
 total_amount = int(input("Enter the total amount:\n >"))
-for values in friends:
+friends_lucky = input("Do you want to use the \"Who is lucky?\" feature? Write Yes/No: \n>")
+try:
+    if friends_lucky == "yes":
+        name_lucky = random.choice(list(friends.keys()))
+        print(name_lucky, "is the lucky one!")
+        number -= 1
+        for values in friends:
             amount = total_amount / number
             friends[values] = round(amount, 2)
-print(friends)
+        friends[name_lucky] = 0
+    elif friends_lucky == "no" or friends_lucky != "no":
+            print("\nNo one is going to be lucky")
+            for values in friends:
+                amount = total_amount / number
+                friends[values] = round(amount, 2)
+except ValueError:
+    print(friends)
