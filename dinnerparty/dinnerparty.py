@@ -31,3 +31,4 @@ try:
                 friends[values] = round(amount, 2)
 except ValueError:
     print(friends)
+print(friends)
